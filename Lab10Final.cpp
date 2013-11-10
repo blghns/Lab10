@@ -35,16 +35,6 @@ int main ()
 		outStream << charVar << ": " << alphabet[i] << endl;
 	}
 
-	int largest = 0;
-	for (int i = 0; i < 26; i++)
-	{
-		if(alphabet[i] > largest){
-			largest = alphabet[i];
-			charVar = i + 97;
-		}
-	}
-
-	outStream << endl << "The most used character is \"" << charVar << "\" which is used for " << largest;
 	inStream.close();
 	outStream.close();
 
