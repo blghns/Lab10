@@ -12,7 +12,15 @@ int main ()
 	char charVar;
 
 	inStream.open("Twain.txt");
+	if (inStream.fail()){
+		cout << "ERROR: Failed to open input \n";
+		exit(-1);
+	}
 	outStream.open("output.txt");
+	if (outStream.fail()){
+		cout << "ERROR: Failed to open output \n";
+		exit(-2);
+	}
 
 	int alphabet[26];
 	for (int i = 0; i < 26; i++)
